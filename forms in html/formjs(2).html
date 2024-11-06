@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<title> html + js basic alert pop-up</title>
+<script >function validateForm()
+
+    {
+        var x=document.formjs.name.value;
+        var y=document.formjs.address.value;
+        var z=document.formjs.phonenumber.value;
+        var w=document.formjs.pincode.value;
+    
+        if(x==null || x=="")
+        {
+            alert("please enter the name");
+            document.formjs.name.focus();
+            
+        }
+    
+        if(y==null || y=="")
+            {
+                alert("please enter the address");
+                document.formjs.address.focus();
+                
+                return false;
+            }
+        if(z==null || z=="")
+        {
+            alert("please enter phone number");
+            document.formjs.phonenumber.focus();
+            return false;
+        }
+    
+       if( isNaN(z))
+       {
+        alert("please enter numbers only,alphabets not allowed");
+        document.formjs.phonenumber.focus();
+        return false;
+       }
+    
+    
+       if(z.length>10 || z.length<10)
+       {
+        alert("phone number cannot exceed 10 digits")
+        document.formjs.phonenumber.focus();
+            return false;
+       }
+    
+       if(w==null || w=="")
+        {
+            alert("please enter pin code");
+            document.formjs.pincode.focus();
+            return false;
+        }
+        
+       if( isNaN(w))
+       {
+        alert("please enter numbers only,alphabets not allowed");
+        document.formjs.pincode.focus();
+        return false;
+       }
+    
+       if(w.length>6 || w.length<6)
+       {
+        alert("pin code cannot exceed 6 digits")
+        document.formjs.pincode.focus();
+            return false;
+       }
+       return true;
+    }
+</script>
+</head>
+<body>
+<form onsubmit="return validateForm()" method="post" action="formjs.html"
+name="formjs">
+<table style="text-align: left; width: 541px; height: 116px;"
+border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">&nbsp; NAME<br>
+</td>
+<td style="vertical-align: top;"><input name="name"><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">ADDRESS<br>
+</td>
+<td style="vertical-align: top;"><input name="address"><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PHONE NUMBER<br>
+</td>
+<td style="vertical-align: top;"><input name="phonenumber"></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">PINCODE<br>
+</td>
+<td style="vertical-align: top;"><input name="pincode"><input
+name="submit " value="submit" type="submit"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+</form>
+</body>
+</html>
+
+    
+     
